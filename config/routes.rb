@@ -1,4 +1,13 @@
 Rbilling::Application.routes.draw do
+
+  namespace :admin do
+    root :to => 'admin#index'
+    #resources :users
+  end
+  get "admin/login"
+
+  get "admin/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

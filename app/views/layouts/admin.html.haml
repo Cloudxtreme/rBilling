@@ -1,0 +1,22 @@
+!!! 5
+%html{lang: "en"}
+%head
+  %title rBilling - Admin Panel
+  %meta{charset: "utf-8"}
+
+  = csrf_meta_tags
+  = stylesheet_link_tag 'admin/admin'
+
+  = javascript_include_tag 'admin/admin'
+
+%body
+  %div#wrapper
+    = render 'layouts/admin/header'
+    = render 'layouts/admin/menu'
+
+    %section#content
+      %section.container_12.clearfix= yield
+
+    = render 'layouts/admin/footer'
+
+    = yield :bottom_js
