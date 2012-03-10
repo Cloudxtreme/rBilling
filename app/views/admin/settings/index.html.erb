@@ -1,29 +1,29 @@
-<h1>Listing admin_settings</h1>
+<h1>Settings</h1>
 
-<table>
+<table class="table-striped table-bordered table">
+  <thead>
   <tr>
     <th>Name</th>
     <th>Value</th>
-    <th>Group name</th>
-    <th>Notes</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Setting Group</th>
+    <th>Actions</th>
   </tr>
+  <tbody>
 
-<% @admin_settings.each do |admin_setting| %>
-  <tr>
-    <td><%= admin_setting.name %></td>
-    <td><%= admin_setting.value %></td>
-    <td><%= admin_setting.group_name %></td>
-    <td><%= admin_setting.notes %></td>
-    <td><%= link_to 'Show', admin_setting %></td>
-    <td><%= link_to 'Edit', edit_admin_setting_path(admin_setting) %></td>
-    <td><%= link_to 'Destroy', admin_setting, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  <% @admin_settings.each do |admin_setting| %>
+    <tr>
+      <td><%= admin_setting.name.humanize %></td>
+      <td><%= admin_setting.value %></td>
+      <td><%= admin_setting.group.humanize %></td>
+      <td>
+        <%= link_to 'Show', admin_setting, :class => 'btn btn-mini' %>
+        | <%= link_to 'Edit', edit_admin_setting_path(admin_setting), :class => 'btn btn-mini' %>
+        | <%= link_to 'Destroy', admin_setting, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
 </table>
 
-<br />
+<br/>
 
-<%= link_to 'New Setting', new_admin_setting_path %>

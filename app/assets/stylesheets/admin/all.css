@@ -1,4 +1,4 @@
 /*
- *= require ../../../vendor/dreamskin/css/screen.css
+ *= require_relative vendor/dreamskin/css/screen.css
  *= require_tree .
 */

@@ -10,24 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="clear"></div>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :value %><br />
+    <strong><%= f.label :name %></strong><br />
     <%= f.text_field :value %>
   </div>
   <div class="field">
-    <%= f.label :group_name %><br />
-    <%= f.text_field :group_name %>
+    <%= f.label :group %><br />
+    <%= f.text_field :group %>
   </div>
-  <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_field :notes %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save Setting', {:class => 'btn btn-primary'} %>
   </div>
 <% end %>

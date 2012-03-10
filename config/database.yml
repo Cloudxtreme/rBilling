@@ -19,7 +19,7 @@ global: &global
 
 development:
   <<: *global
-  database: ibilling_dev
+  database: rbilling_dev
 
 
 # Warning: The database defined as "test" will be erased and
@@ -27,4 +27,4 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: &global
-  database: ibilling_test
+  database: rbilling_test

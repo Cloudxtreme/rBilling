@@ -1,4 +1,4 @@
-class Admin::SettingsController < ApplicationController
+class Admin::SettingsController < Admin::AdminController
   # GET /admin/settings
   # GET /admin/settings.json
   def index

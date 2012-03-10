@@ -3,8 +3,8 @@ class CreateAdminSettings < ActiveRecord::Migration
     create_table :admin_settings do |t|
       t.string :name
       t.string :value
-      t.string :group_name
-      t.string :notes
+      t.string :group
+      t.string :field_type
 
       t.timestamps
     end

@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120310065656) do
+ActiveRecord::Schema.define(:version => 20120310065815) do
 
   create_table "admin_settings", :force => true do |t|
     t.string   "name"
-    t.text     "value"
+    t.string   "value"
     t.string   "group_name"
-    t.string   "notes"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
